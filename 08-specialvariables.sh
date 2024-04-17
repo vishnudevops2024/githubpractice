@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "all variables : $@"
-echo "date : $DATE"
+echo "date : $date"
 echo "noumber of variable passed : $#"
 echo "script name : $0"
 echo "current working directory : $PWD"
