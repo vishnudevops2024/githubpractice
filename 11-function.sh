@@ -22,7 +22,7 @@ VALIDATE()
             echo "you are super user"
         fi
 
-dnf install mqsql -y
+dnf install mysql -y
 VALIDATE $? "Installing MQSQL"
 
 dnf install git -y
