@@ -1,8 +1,10 @@
 #!/bin/bash
 
 USERID=$(id -u)
-TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S:")
+TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 echo "$TIMESTAMP"
+Script_Name=$(echo "$0" | cut -d "." -f1)
+LOGFILE=/repos/$Script_Name-$TIMESTAMP.log
 
 VALIDATE()
 {
@@ -25,7 +27,7 @@ VALIDATE()
         fi
 
 dnf install mysql -y
-VALIDATE $? "Installing MQSQL"
+VALIDATE $? "Installing MQSQL" &>>LOGFILE
 
 dnf install git -y
-VALIDATE $? "installing Git"
+VALIDATE $? "installing Git" &>>LOGFILE
