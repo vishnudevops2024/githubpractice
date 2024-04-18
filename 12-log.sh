@@ -5,6 +5,7 @@ TIMESTAMP=$(date +%Y-%m-%d %H:%M:%S)
 ##echo "$TIMESTAMP"
 Script_Name=$(echo "$0" | cut -d "." -f1)
 LOGFILE=/tmp/$Script_Name-$TIMESTAMP.log
+echo "$LOGFILE"
 
 VALIDATE()
 {
