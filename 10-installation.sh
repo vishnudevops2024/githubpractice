@@ -21,12 +21,14 @@ then
     exit 1
 
 else 
+    echo "mysql is installing ....."
     echo "installation of mysql.. SUCCESS"
+    exit 0
 fi
 
 dnf install git -y 
 
-if [$? -ne 0]
+if [ $? -ne 0 ]
 then 
     echo "installation of Git .. FAILURE"
     exit 1
