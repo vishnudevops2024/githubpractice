@@ -17,7 +17,7 @@ do
     dnf list installed $i
         if [ $? -eq 0 ]
         then
-            echo "package installed..SKIPPING"
+            echo "package installed $i....SKIPPING"
         else
             echo "package not installed .. need to installed"
         fi
