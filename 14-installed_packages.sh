@@ -10,3 +10,10 @@ then
 else    
     echo "you ar the sup[er user"
 fi
+
+for i in $@
+do 
+    echo "package to instal : $i"
+
+done
+    
