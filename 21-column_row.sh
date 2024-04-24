@@ -18,7 +18,7 @@ END {
         }
         printf("\n");
     }
-}' column_row.txt | mail -s "Column_row" vishnudevops2024@gmail.com
+}' column_row.txt | mail -s "COLUMN - ROW EXAMPLE" vishnudevops2024@gmail.com
 
 
 
