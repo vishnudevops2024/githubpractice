@@ -2,7 +2,7 @@
 
 HOSTNAME=$hostname
 SUBJECT="HIGH_CPU_USAGE"
-CPUUSAGE=$(ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 6)
+#CPUUSAGE=$(ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 6)
 sendmailalert(){
     (
         echo -e "SUBJECT : $SUBJECT"
@@ -18,7 +18,7 @@ checkcpuusage(){
         #echo "$CPUUSAGE" | grep "%cpu" | awk 'print $2' | cut -d -f5
         CPUUSAGE=$(ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | awk '{print $NF}' | cut -d' ' -f1)
 
-        if [ "$CPUUSAGE" -ge "$THRESHOULD" ] 
+        if [ "$CPUUSAGE" -gt "$THRESHOULD" ] 
         then
             echo "High cpu detected on $HOSTNAME"
             sendmailalert
