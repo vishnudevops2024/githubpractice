@@ -15,10 +15,10 @@ do
     # Convert each line into words, filter out empty lines, and count occurrences
     echo "$line" | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c | sort -bnr |
     # Iterate over each word/count pair and print in sentence format
-    while read -r count word; 
-    do
-        echo "The word '$word' appears $count time(s) in the text."
-    done
+    #while read -r count word; 
+    #do
+        #echo "The word '$word' appears $count time(s) in the text."
+    #done
 done < "wordcount1.txt"
 
  
