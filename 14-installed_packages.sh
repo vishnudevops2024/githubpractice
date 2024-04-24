@@ -20,6 +20,7 @@ do
             echo "package installed $i....SKIPPING"
         else
             echo "package not installed .. need to installed"
+            
         fi
 done
 
