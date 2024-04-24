@@ -16,11 +16,11 @@ wordcount() {
     cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c | sort -bnr | head -n 5 |
     while read -r count word;  
     do
-        echo "<p>'<span class=\"red\">$word</span>' appears <span class=\"green\">$count</span> times in file</p>"
+        echo "<h6 style='color:red'> $word </h6> appears <h6 style='color:green'>$count </h6> times in file"
     done 
 
     echo "</body>"
     echo "</html>"
 }
 
-wordcount | sendmail -t "WORDCOUNT ALERT" vishnudevops2024@gmail.com
+wordcount | mail s "WORDCOUNT ALERT" vishnudevops2024@gmail.com
