@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat column_row.txt | tr ' ' '\n'
+cat column_row.txt | tr '\n'
