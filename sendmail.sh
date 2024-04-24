@@ -6,18 +6,12 @@ R=$"\e[31m"
 G=$"\e[32m"
 N=$"\e[0m"
 
-
-
-SUBJECT=HIGH_CPU_USAGE
-echo -e " $R $SUBJECT $N"
-
-EMAIL="vishnudevops2024@gmail.com"
 wordcount() {
 
 cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c | sort -bnr | head -n 5 |
   while read -r count word;  
   do
-        echo -e  " '$word'  appears $count  times in file " 
+        echo -e  " $R '$word' $N  appears $G $count $N times in file " 
     done 
    
 
