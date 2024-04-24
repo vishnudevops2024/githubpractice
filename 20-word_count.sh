@@ -9,7 +9,9 @@ cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c |
   while read -r count word;  
   do
         echo -e  " $R'$word' $N appears $G $count $N times in file "
-    done
+    done 
+    
+    mail -s "wordcount" vishnudevops2024@gmail.com
 
 
 
