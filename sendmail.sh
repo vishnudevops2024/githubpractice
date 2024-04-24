@@ -22,7 +22,7 @@ sendmailalert() {
     echo "Please check below word count"
 
 
-) | mail -s 
+) | mail -s "vishnudevops2024@gmail.com"
 
 }
 
