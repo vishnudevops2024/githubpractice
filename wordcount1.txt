@@ -1,0 +1,1 @@
+You are given a string and a word your task is that count the number of occurrences of the given word in the string and print the number of occurrences of the word. 
