@@ -25,6 +25,7 @@ checkcpuusage(){
 
         else
             echo "CPU usage normal range"
+            sendmailalert
 
         fi
 
