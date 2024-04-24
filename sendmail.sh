@@ -8,6 +8,6 @@ N=$"\e[0m"
 
 
 
-SUBJECT=$($R HIGH_CPU_USAGE $N)
+SUBJECT=$(HIGH_CPU_USAGE)
 
-echo -e "$SUBJECT"
+echo -e " $R $SUBJECT $N"
