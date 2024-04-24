@@ -1,5 +1,8 @@
 #!/bin/bash
 
+MIME-Version: 1.0
+Content-Type: text/html
+
 wordcount() {
     echo "<html>"
     echo "<head>"
