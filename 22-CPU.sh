@@ -15,7 +15,7 @@ THRESHOULD=0
 checkcpuusage(){
 
         CPUUSAGE=$(ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 6)
-        if [ $CPUUSAGE -gt $THRESHOULD] 
+        if [ $CPUUSAGE -gt $THRESHOULD ] 
         then
             echo "High cpu detected on $HOSTNAME"
             sendmailalert
