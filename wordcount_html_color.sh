@@ -23,4 +23,4 @@ wordcount() {
     echo "</html>"
 }
 
-wordcount | mail -s "WORDCOUNT ALERT" vishnudevops2024@gmail.com
+wordcount | sendmail -t "WORDCOUNT ALERT" vishnudevops2024@gmail.com
