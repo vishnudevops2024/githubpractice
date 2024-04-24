@@ -1,11 +1,11 @@
 #!/bin/bash
 
-MIME-Version: 1.0
-Content-Type: text/html
-
 wordcount() {
     echo "<html>"
     echo "<head>"
+    echo "MIME-Version: 1.0"
+    echo "Content-Type: text/html"
+    echo "Content-Disposition: inline"
     echo "<style>"
     echo "  .red { color: red; }"
     echo "  .green { color: green; }"
@@ -23,4 +23,4 @@ wordcount() {
     echo "</html>"
 }
 
-wordcount | mail -s "wWORDCOUNT ALERT" vishnudevops2024@gmail.com
+wordcount | mail -s "WORDCOUNT ALERT" vishnudevops2024@gmail.com
