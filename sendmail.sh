@@ -10,5 +10,5 @@ cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c |
    
 
 }
-wordcount  | mail -s "wordcount aler" vishnudevops2024@gmail.com
+wordcount  | mail -s "WORDCOUNT-EXAMPLE1" vishnudevops2024@gmail.com
 
