@@ -8,4 +8,8 @@
 
 #| grep -v "^\s*$" | sort | uniq -c | sort -bnr
 
-for w in `cat wordcount1.txt`; do echo $w; done|sort|uniq -c
+for w in `cat wordcount1.txt`; 
+do 
+echo $w; 
+done
+|sort|uniq -c | sort -bnr | head -n 5
