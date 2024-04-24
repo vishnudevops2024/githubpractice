@@ -33,7 +33,7 @@ cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c |
   do
         echo -e  " '$word'  appears $count  times in file " 
     done 
-    
+   sendmailalert 
 
 }
 
