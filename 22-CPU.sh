@@ -14,10 +14,10 @@ THRESHOULD=0.0
 
 checkcpuusage(){
 
-        #CPUUSAGE=$(ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 6)
+        CPUUSAGE=$(ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 6)
         #echo "$CPUUSAGE" | grep "%cpu" | awk 'print $2' | cut -d -f5
         #CPUUSAGE=$(ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 6  | grep "%cpu" | awk '{print $NF}' | cut -d' ' -f1 )
-        top -bn1 | grep "Cpu(s)" | awk '{print $2}'
+        #top -bn1 | grep "Cpu(s)" | awk '{print $2}'
 
         if [ "$CPUUSAGE" -gt "$THRESHOULD" ] 
         then
