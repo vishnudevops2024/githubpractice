@@ -12,18 +12,6 @@ SUBJECT=HIGH_CPU_USAGE
 echo -e " $R $SUBJECT $N"
 
 EMAIL="vishnudevops2024@gmail.com"
-
-sendmailalert() {
-
-(
-    
-    echo "Please check below word count"
-
-
-) | mail -s 
-
-}
-
 wordcount() {
 
 cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c | sort -bnr | head -n 5 |
@@ -34,6 +22,5 @@ cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c |
    
 
 }
-sendmailalert 
-wordcount
+wordcount  | mail -s "mailalert" vishnudevops2024@gmail.com
 
