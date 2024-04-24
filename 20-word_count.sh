@@ -4,7 +4,9 @@
 
 ##tr '[:space:]' '[\n*]' < your_text_file.txt | grep -v "^\s*$" | sort | uniq -c | sort -bnr
 
-cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c
+cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c | echo "$1 is $2"
+
+
 
 #| sort | uniq -c | sort -bnr | head -n 5
 
