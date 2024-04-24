@@ -16,7 +16,7 @@ wordcount() {
     cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c | sort -bnr | head -n 5 |
     while read -r count word;  
     do
-        echo "<h6 style='color:red'> $word </h6> appears <h6 style='color:green'>$count </h6> times in file"
+        echo "<style> $word </style> appears  <style> $count </style> times in file"
     done 
 
     echo "</body>"
