@@ -5,6 +5,14 @@
 R=$"\e[31m"
 G=$"\e[32m"
 N=$"\e[0m"
+echo "content-Type : text\html"
+echo 
+echo "<html>"
+echo "<body>"
+echo "<h3 style='color:red'> wordcount checking </h3>"
+echo "sample test mail"
+echo "</body>"
+echo "</html>"
 
 wordcount() {
 
