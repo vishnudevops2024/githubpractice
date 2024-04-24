@@ -2,11 +2,24 @@
 
 #cat column_row.txt | tr '\n'
 
+# Transpose the input table using awk
+awk '{
+    for (i = 1; i <= NF; i++) {
+        if (NR == 1) {
+            header[i] = $i;
+        } else {
+            data[i][NR - 1] = $i;
+        }
+    }
+}
+END {
+    for (i = 1; i <= NF; i++) {
+        printf("%s\t", header[i]);
+        for (j = 1; j <= NR - 1; j++) {
+            printf("%s\t", data[i][j]);
+        }
+        printf("\n");
+    }
+}' column_row.txt
 
-while IFS= read -r line; do
-    # Skip the header line
-    if [[ ! $line =~ ^Name ]]; then
-        # Convert each line into rows using awk
-        echo "$line" | awk '{print $1 "\t" $2}'
-    fi
-done < "column_row.txt"
+
