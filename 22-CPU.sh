@@ -10,7 +10,7 @@ sendmailalert(){
     ) | mail -s "Top 5 CPU Usage" vishnudevops2024@gmail.com
 }
 
-THRESHOULD=0
+THRESHOULD=0.0
 
 checkcpuusage(){
 
