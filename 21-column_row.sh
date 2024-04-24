@@ -18,7 +18,7 @@ END {
         }
         printf("\n");
     }
-}' column_row.txt
+}' column_row.txt | | mail -s "Column_row" vishnudevops2024@gmail.com
 
 
 
