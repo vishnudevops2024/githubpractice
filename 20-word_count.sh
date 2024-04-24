@@ -8,7 +8,7 @@ B=$"\e[1m"
 cat wordcount1.txt | tr '[:space:]' '[\n*]' | grep -v "^\s*$" | sort | uniq -c | sort -bnr | head -n 5 |
   while read -r count word;  
   do
-        echo -e  " $B '$word' $N appears $B $count $N times in file "
+        echo -e  " $R$B '$word' $N appears $G$B $count $N times in file "
     done
 
 
